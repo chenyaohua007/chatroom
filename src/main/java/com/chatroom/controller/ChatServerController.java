@@ -44,7 +44,6 @@ public class ChatServerController extends WebSocketServer {
      */
     @Override
     public void onMessage(WebSocket conn, String message) {
-        System.out.println(message);
         if(null != message && message.indexOf("login:")!=-1){
             //登录操作
             String userName=message.replaceFirst("login:", "");
