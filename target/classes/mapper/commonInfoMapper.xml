@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chatroom.dao.CommonInfoDAO">
+    <select id="getPhrase" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT id,reporttype,reporttypename,phrase reportsay FROM reportphrase
+        <where>
+            <if test="id != null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="reporttype != null and reporttype!=''">
+                and reporttype=#{reporttype}
+            </if>
+            <if test="creater != null and creater!=''">
+                and creater=#{creater}
+            </if>
+        </where>
+        <if test="page != null">
+            limit #{page},#{limit}
+        </if>
+    </select>
+    <select id="getPhraseCount" parameterType="java.util.Map" resultType="Integer">
+        SELECT count(1) FROM reportphrase
+        <where>
+            <if test="id != null and id!=''">
+                id=#{id}
+            </if>
+        </where>
+    </select>
+    <select id="delPhrase" parameterType="java.util.Map" resultType="java.util.Map">
+        DELETE FROM reportphrase WHERE ID=#{id}
+    </select>
+    <select id="savePhrase" parameterType="java.util.Map" resultType="java.util.Map">
+        INSERT INTO reportphrase(id,reporttype,reporttypename,phrase,creater)
+        values(#{id},#{reporttype},#{reporttypename},#{phrase},#{creater})
+    </select>
+    <select id="updatePhrase" parameterType="java.util.Map" resultType="java.util.Map">
+        UPDATE reportphrase SET reporttype=#{reporttype},reporttypename=#{reporttypename},phrase=#{phrase}
+        WHERE id=#{id}
+    </select>
+
+
+    <select id="getf" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT id,fstart,fend,fvalue FROM fvalue
+        <where>
+            <if test="id != null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="gdy != null and gdy!=''">
+                and #{gdy} <![CDATA[ >= ]]> fstart AND #{gdy} <![CDATA[ < ]]> fend
+            </if>
+        </where>
+        <if test="page != null">
+            limit #{page},#{limit}
+        </if>
+    </select>
+    <select id="getfCount" parameterType="java.util.Map" resultType="int">
+        SELECT count(1) FROM fvalue
+        <where>
+            <if test="id != null and id!=''">
+                id=#{id}
+            </if>
+        </where>
+    </select>
+    <select id="delf" parameterType="java.util.Map" resultType="java.util.Map">
+        DELETE FROM fvalue WHERE ID=#{id}
+    </select>
+    <select id="savef" parameterType="java.util.Map" resultType="java.util.Map">
+        INSERT INTO fvalue(id,fstart,fend,fvalue)
+        values(#{id},#{fstart},#{fend},#{fvalue})
+    </select>
+    <select id="updatef" parameterType="java.util.Map" resultType="java.util.Map">
+        UPDATE fvalue SET fstart=#{fstart},fend=#{fend},fvalue=#{fvalue}
+        WHERE id=#{id}
+    </select>
+</mapper>

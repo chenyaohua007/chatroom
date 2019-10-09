@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.logo{
+	display: block;
+	margin:50px auto;
+	margin-top:250px;
+}
+.login{
+	text-align: center;
+	color: #00a1d6;
+}
+.login h1{
+	font-size: 28px;
+	font-weight: normal;
+	line-height: 50px;
+}
+.login p{
+	line-height:80px;
+}
+.login input{
+	width: 200px;
+	height:30px;
+	border-radius:5px;
+	display:block;
+	margin:0 auto;
+	border: 1px solid #ccc;
+	padding-left:5px;
+	padding-right:5px;
+	outline:none;
+	transition: all .2s ease;
+	font-size:12px;
+	text-align:center;
+}
+.login input:hover{
+	border:1px solid #00a1d6;
+}
+.login input:focus{
+	border:1px solid #00a1d6;
+}
+.login button{
+	margin-top:30px;
+	width:100px;
+	height:30px;
+	border:1px solid #00a1d6;
+	cursor: pointer;
+	background: #fff;
+	transition: all .2s ease;
+}
+.login button:hover{
+	background:#00a1d6;
+	color:#fff;
+}
+.logo2{
+	display: block;
+	margin:18px auto;
+}
+
+.say{
+	display:none;
+	border: 1px solid #00a1d6;
+	margin:20px auto;
+	width:1200px;
+	height:800px;
+	border-radius:5px;
+}
+.say-left{
+	width:250px;
+	height:700px;
+	border-radius:5px;
+	border-right: 1px solid #00a1d6;
+	border-top: 1px solid #00a1d6;
+}
+.say-right{
+	width:950px;
+	height:700px;
+	float: right;
+	border-top: 1px solid #00a1d6;
+	border-radius:5px;
+}
+.say-left-header{
+	text-align: center;
+	font-size:14px;
+	color:#fff;
+	border-bottom: 1px solid #999;
+	padding:10px 0;
+	background:#00a1d6;
+}
+.say-left-header strong{
+
+}
+.user-list{
+	height:590px;
+	list-style: none;
+	text-align: center;
+	font-size: 14px;
+	overflow: auto;
+}
+.user-list li{
+	border-bottom:1px solid #bbb;
+	padding:10px 0;
+}
+.say-fuck{
+	height:560px;
+	overflow: auto;
+	width:100%;
+	border-bottom:1px solid #00a1d6;
+	padding-bottom: 5px;
+	padding-top:5px;
+}
+.say-row{
+	margin-bottom:20px;
+}
+.say-row p{
+	font-size: 12px;
+}
+.say-other{
+	float:left;
+	padding-left: 30px;
+	padding-top: 20px;
+	text-align:left;
+}
+.say-my{
+	float:right;
+	padding-right: 30px;
+	padding-top: 20px;
+	text-align:right;
+}
+.say-text{
+	max-width: 400px;
+}
+.say-out{
+	height: 125px;
+
+}
+#out-text{
+	resize:none;
+	width:800px;
+	height:115px;
+	padding:5px;
+	outline:none;
+	border:none;
+	margin-left: 1px;
+	float:left;
+}
+.out{
+	display:inline-block;
+	background:#00a1d6;
+	height:128px;
+	width:125px;
+	border-radius:5px;
+	float:right;
+	text-align: center;
+	line-height:127px;
+	color:#fff;
+	font-size:24px;
+	cursor:pointer;
+	transition:all .2s ease;
+}
+.out:hover{
+	background:#22bdf0;
+}
